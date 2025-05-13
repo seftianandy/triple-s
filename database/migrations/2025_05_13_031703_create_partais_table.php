@@ -11,26 +11,26 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('partai', function (Blueprint $table) {
+        Schema::create('partais', function (Blueprint $table) {
             $table->id();
             $table->string('partai');
-            $table->foreignId('tim_merah_id')
-                ->constrained('peserta')
+            $table->foreignId('atlit_merah_id')
+                ->constrained('atlits')
                 ->onDelete('cascade');
-            $table->foreignId('tim_biru_id')
-                ->constrained('peserta')
+            $table->foreignId('atlit_biru_id')
+                ->constrained('atlits')
                 ->onDelete('cascade');
             $table->foreignId('kategori_pertandingan_id')
-                ->constrained('kategori_pertandingan')
+                ->constrained('kategori_pertandingans')
                 ->onDelete('cascade');
             $table->string('status_pertandingan');
             $table->string('tgl_pelaksanaan');
             $table->foreignId('pemenang_id')
-                ->constrained('peserta')
+                ->constrained('atlits')
                 ->onDelete('cascade');
             $table->string('status_kemenangan');
             $table->foreignId('arena_id')
-                ->constrained('arena')
+                ->constrained('arenas')
                 ->onDelete('cascade');
             $table->timestamps();
         });
@@ -41,6 +41,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('partai');
+        Schema::dropIfExists('partais');
     }
 };
