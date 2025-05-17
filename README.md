@@ -63,7 +63,7 @@ DB_PASSWORD=password
 ```
 
 - Setelah itu jalankan perintah berikut : ```./vendor/bin/sail up -d```. Dengan tambahan -d berarti prosesnya akan berjalan pada background.
-- Atau jika ingin melihat prosesnya untuk memastikan setingan sudah berjalan dengan benar, gunakan perintah berikut : ``./vendor/bin/sail up```.
+- Atau jika ingin melihat prosesnya untuk memastikan setingan sudah berjalan dengan benar, gunakan perintah berikut : ```./vendor/bin/sail up```.
 - Bila sudah selesai jalankan generate key dengan perintah berikut : ```./vendor/bin/sail artisan key:generate```.
 - Dan migrate databasenye : ```./vendor/bin/sail artisan migrate```.
 - Jalankan seedernya juga dengan perintah berikut : ```./vendor/bin/sail artisan db:seed```.
