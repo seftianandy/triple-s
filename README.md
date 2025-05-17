@@ -35,4 +35,37 @@ Jika sudah menggunakan ```Laragon``` atau ```Herd``` maka tinggal menjalankan pe
 
 - Buka tab baru atau terminal baru dan jalankan perintah ```npm start```
 
+
+## Instalasi Aplikasi Triple-s Menggunakan Docker Sail
+
+Sekarang aplikasi triple-s sudah bisa berjalan pada docker menggunakan sail. Ini akan lebih memudahkan untuk membangun program karena menggunakan 1 sepesifikasi sistem yang bisa berjalan pada semua OS. Berikut cara penginstalannya :
+
+- Pastikan aplikasi docker sudah terinstall pada device dan sudah berjalan.
+- Jalankan perintah berikut pada terminal dengan kondisi path terminal pada root aplikasi ```composer update```.
+- Buat file .env seperti pada langkah diatas. Tambahkan konfigurasi seperti berikut pada file .env nya :
+
+```env
+APP_PORT=8000
+FORWARD_DB_PORT=2025
+FORWARD_REDIS_PORT=2026
+VITE_PORT=5173
+```
+
+- Pastikan pada bagian database, setingannya seperti berikut :
+
+```env
+DB_CONNECTION=pgsql
+DB_HOST=pgsql
+DB_PORT=5432
+DB_DATABASE=triple-s
+DB_USERNAME=postgres
+DB_PASSWORD=password
+```
+
+- Setelah itu jalankan perintah berikut : ```./vendor/bin/sail up -d```. Dengan tambahan -d berarti prosesnya akan berjalan pada background.
+- Atau jika ingin melihat prosesnya untuk memastikan setingan sudah berjalan dengan benar, gunakan perintah berikut : ``./vendor/bin/sail up```.
+- Bila sudah selesai jalankan generate key dengan perintah berikut : ```./vendor/bin/sail artisan key:generate```.
+- Dan migrate databasenye : ```./vendor/bin/sail artisan migrate```.
+- Jalankan seedernya juga dengan perintah berikut : ```./vendor/bin/sail artisan db:seed```.
+
 # triple-s
