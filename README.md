@@ -62,10 +62,30 @@ DB_USERNAME=postgres
 DB_PASSWORD=password
 ```
 
+- Tambahkan script berikut pada .env untuk menggunakan zona waktu jakarta : ```APP_TIMEZONE=Asia/Jakarta```
+- Cari script berikut pada .env :
+
+```env
+SESSION_DRIVER=database
+QUEUE_CONNECTION=database
+CACHE_STORE=database
+```
+
+- Setelah ketemu, rubah menjadi seperti berikut :
+
+```env
+SESSION_DRIVER=redis
+QUEUE_CONNECTION=redis
+CACHE_STORE=redis
+```
+
 - Setelah itu jalankan perintah berikut : ```./vendor/bin/sail up -d```. Dengan tambahan -d berarti prosesnya akan berjalan pada background.
 - Atau jika ingin melihat prosesnya untuk memastikan setingan sudah berjalan dengan benar, gunakan perintah berikut : ```./vendor/bin/sail up```.
 - Bila sudah selesai jalankan generate key dengan perintah berikut : ```./vendor/bin/sail artisan key:generate```.
 - Dan migrate databasenye : ```./vendor/bin/sail artisan migrate```.
 - Jalankan seedernya juga dengan perintah berikut : ```./vendor/bin/sail artisan db:seed```.
+- Untuk menjalankan aplikasi pada lingkungan developer gunakan perintah berikut : ```./vendor/bin/sail npm install```.
+- Setelah selesai, jalankan perintah berikut : ```./vendor/bin/sail npm run dev```. Ini akan menjalankan vite pada aplikasi ini yang berfungsi untuk menampilkan efek tailwind css yang digunakan.
+- Jalankan juga perintah berikut : ```./vendor/bin/sail npm start```. Ini akan menjalankan socket.io yang digunakan untuk realtime proses penilaian pada aplikasi.
 
 # triple-s

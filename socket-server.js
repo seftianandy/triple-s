@@ -17,7 +17,7 @@ const io = new Server(server, {
 });
 
 // Konfigurasi Redis adapter untuk socket.io
-io.adapter(redisAdapter({ host: 'localhost', port: 6379 }));
+io.adapter(redisAdapter({ host: 'redis', port: 6379 }));
 
 io.on('connection', (socket) => {
   console.log('A user connected');
