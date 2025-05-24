@@ -12,13 +12,17 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
         <!-- Scripts -->
+        @livewireStyles
+        <script src="https://cdn.tailwindcss.com"></script>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         @livewireStyles
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
-            <livewire:layout.navigation />
+            @if(Request::path() !== 'pilih-arena')
+                <livewire:layout.navigation />
+            @endif
 
             <!-- Page Heading -->
             @if (isset($header))
@@ -31,10 +35,11 @@
 
             <!-- Page Content -->
             <main>
-                {{ $slot }}
+                {{ $slot }}                
             </main>
         </div>
 
         @livewireScripts
     </body>
+
 </html>

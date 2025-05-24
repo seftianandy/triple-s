@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ScoreController;
+use App\Livewire\PilihArena;
 
 use App\Livewire\SettingPage;
 use App\Livewire\UpdateApp;
@@ -21,5 +22,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/setting', SettingPage::class)->name('setting.index');
     Route::get('/setting/update-aplikasi', UpdateApp::class)->name('update.show');
 });
+
+Route::get('/pilih-arena', PilihArena::class)
+    ->middleware(['auth'])
+    ->name('pilih-arena');
 
 require __DIR__.'/auth.php';
