@@ -40,7 +40,7 @@
                     </div>
                 </a>
 
-                {{-- Card 3 --}}
+                {{-- Card 3 --}} 
                 <a href="{{ route('setting.index') }}" class="relative block p-4 rounded text-white bg-yellow-500 shadow-md hover:bg-yellow-600 transition">
                     <div class="flex justify-between items-center">
                         <div>
@@ -60,6 +60,11 @@
                     </div>
                 </a>
             </div>
+            @livewire('pilih-arena')
+            @livewire('halaman-operator')
+            @livewire('list-atlit')
+            @livewire('operator-register-akun')
+            @livewire('papan-skor1')
         </div>
     </div>
 </x-app-layout>

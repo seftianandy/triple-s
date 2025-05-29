@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ScoreController;
 use App\Livewire\PilihArena;
+use App\Livewire\HalamanOperator;
 
 use App\Livewire\SettingPage;
 use App\Livewire\UpdateApp;
@@ -26,5 +27,6 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/pilih-arena', PilihArena::class)
     ->middleware(['auth'])
     ->name('pilih-arena');
+
 
 require __DIR__.'/auth.php';

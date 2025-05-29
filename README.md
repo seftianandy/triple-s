@@ -78,6 +78,9 @@ SESSION_DRIVER=redis
 QUEUE_CONNECTION=redis
 CACHE_STORE=redis
 ```
+```env
+REDIS_HOST=redis
+```
 
 - Setelah itu jalankan perintah berikut : ```./vendor/bin/sail up -d```. Dengan tambahan -d berarti prosesnya akan berjalan pada background.
 - Atau jika ingin melihat prosesnya untuk memastikan setingan sudah berjalan dengan benar, gunakan perintah berikut : ```./vendor/bin/sail up```.
@@ -89,3 +92,16 @@ CACHE_STORE=redis
 - Jalankan juga perintah berikut : ```./vendor/bin/sail npm start```. Ini akan menjalankan socket.io yang digunakan untuk realtime proses penilaian pada aplikasi.
 
 # triple-s
+
+
+# catatan richi
+heroicon(icon)
+
+./vendor/bin/sail = sail
+
+new page
+sail artisan make:livewire PageName
+
+sail up -d
+sail npm run dev
+sail npm start
