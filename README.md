@@ -105,3 +105,16 @@ sail artisan make:livewire PageName
 sail up -d
 sail npm run dev
 sail npm start
+
+
+# link menu
+pilih-arena
+halaman-operator
+list-atlit
+operator-register-akun
+papan-skor1
+papan-skor-solo1
+papan-skor-solo2
+penilaian-dewan-juri
+penilaian-juri
+papan-skor-ganda1

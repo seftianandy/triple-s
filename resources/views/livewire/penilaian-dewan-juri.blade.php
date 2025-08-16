@@ -70,7 +70,7 @@
                 </td>
                 <td>
                     <div class="p-2 text-center">
-                        <span class="text-blue-600 font-bold">0</span>
+                        <span class="text-blue-600 font-bold"></span>
                     </div>
                 </td>
             </tr>
@@ -95,14 +95,20 @@
                     </div>
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <div class="flex-1 bg-gray-100 p-3">
+                        <h3 class="text-center font-semibold text-gray-800">Total Score</h3>
+                    </div>
+                </td>
+                <td>
+                    <div class="p-2 text-center bg-gray-100">
+                        <span class="text-blue-600 font-bold">0</span>
+                    </div>
+                </td>
+            </tr>
         </table>
 
-        <!-- Total Score Section -->
-        <div class="flex">
-            <div class="flex-1 bg-gray-100 p-3">
-                <h3 class="text-center font-semibold text-gray-800">Total Score</h3>
-            </div>
-        </div>
     </div>
 
 

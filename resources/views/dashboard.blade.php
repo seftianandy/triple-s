@@ -60,16 +60,9 @@
                     </div>
                 </a>
             </div>
-            @livewire('pilih-arena')
-            @livewire('halaman-operator')
-            @livewire('list-atlit')
-            @livewire('operator-register-akun')
-            @livewire('papan-skor1')
-            @livewire('papan-skor-solo1')
-            @livewire('papan-skor-solo2')
-            @livewire('penilaian-dewan-juri')
-            @livewire('penilaian-juri')
-            @livewire('papan-skor-ganda1')
+            
+            
+            
         </div>
     </div>
 </x-app-layout>
