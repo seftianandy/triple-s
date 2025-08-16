@@ -97,9 +97,9 @@ REDIS_HOST=redis
 # catatan richi
 heroicon(icon)
 
-./vendor/bin/sail = sail
+sudo ./vendor/bin/sail = sail
 
-new page
+# new page
 sail artisan make:livewire PageName
 
 sail up -d
